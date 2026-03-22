@@ -1,8 +1,5 @@
 import numpy as np
-import sympy as sp
 import scipy as sc
-import matplotlib.pyplot as plt
-from scipy.optimize import fsolve
 
 rng = np.random.default_rng()
 
@@ -13,7 +10,7 @@ def task1():
 
     sub_matrix = matrix[1:5,6:10]
     print(sub_matrix)
-    print(np.linalg.det(sub_matrix))
+    print(np.round(np.linalg.det(sub_matrix)))
 
 def task2():
     print('=' * 50, '\nTask 2')
@@ -24,14 +21,12 @@ def task2():
     print('Matrix 2\n', matrix2)
 
     # Способ 1: Векторный алгоритм умножения матриц
-    # (каждый элемент вычисляется как скалярное произведение строки и столбца)
     print('\n' + '=' * 50)
     print('1. Векторный алгоритм умножения матриц:')
 
     result_vector = np.zeros((3, 3))
     for i in range(3):
         for j in range(3):
-            # Скалярное произведение i-й строки matrix1 и j-го столбца matrix2
             result_vector[i, j] = np.sum(matrix1[i, :] * matrix2[:, j])
 
     print('Результат:\n', result_vector)
