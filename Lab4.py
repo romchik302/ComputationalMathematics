@@ -1,7 +1,6 @@
 import numpy as np
 from sympy import symbols, prod
 import matplotlib.pyplot as plt
-from sympy.printing.printer import print_function
 
 coords_table1 = np.array([
     [0.43, 1.63597],
@@ -141,5 +140,6 @@ def task2():
     for i in range(len(x_ansv2)):
         print('Значение функции в точке', x_ansv2[i], '=', newton_forward(x_points, y_points, x_ansv2[i]))
 
-task1()
-task2()
+if __name__ == "__main__":
+    task1()
+    task2()

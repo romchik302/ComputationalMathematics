@@ -1,5 +1,5 @@
 import numpy as np
-import sympy as sp
+
 rng = np.random.default_rng(42)
 vec = rng.integers(low=-10, high=10, size=10)
 print('Случайный вектор для заданий 1 и 3:\n', vec)
@@ -11,7 +11,7 @@ def householder_obliterate(x, start_idx):
     sigma = np.linalg.norm(a)
 
     if sigma == 0:
-        return y  # уже обнулено
+        return y, np.eye(len(x))
 
     v = a.copy()
     v[0] = v[0] + np.sign(a[0]) * sigma
@@ -121,7 +121,8 @@ def task4():
     np_res = np.linalg.solve(r_np, q_np.T @ b_vec)
     print(np_res)
 
-task1()
-task2()
-task3()
-task4()
+if __name__ == "__main__":
+    task1()
+    task2()
+    task3()
+    task4()
