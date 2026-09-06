@@ -119,7 +119,8 @@ def task4():
     except Exception as e:
         print(f"Ошибка при решении: {e}")
 
-task1()
-task2()
-task3()
-task4()
+if __name__ == "__main__":
+    task1()
+    task2()
+    task3()
+    task4()

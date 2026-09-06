@@ -18,7 +18,7 @@ def task2():
 
     vector1 = np.round(np.random.rand(5,1) * 10).astype(int)
     print("Случайный [1;10) вектор\n", vector1)
-    print("Перемножение матрицы и вектора:\n", matrix1 * vector1)
+    print("Перемножение матрицы и вектора:\n", matrix1 @ vector1)
 
 def task3():
     x, y = sp.symbols('x y')
@@ -141,11 +141,12 @@ def task8():
 
     plt.show()
 
-task1()
-task2()
-task3()
-task4()
-task5()
-task6()
-task7()
-task8()
+if __name__ == "__main__":
+    task1()
+    task2()
+    task3()
+    task4()
+    task5()
+    task6()
+    task7()
+    task8()

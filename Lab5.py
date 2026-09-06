@@ -505,7 +505,8 @@ def task4():
     print('Макс отклонение от RK4 =',
           np.max(np.abs(sol.y[0] - y_rk)))
 
-task1()
-task2()
-
-task4()
+if __name__ == "__main__":
+    task1()
+    task2()
+    task3()
+    task4()
